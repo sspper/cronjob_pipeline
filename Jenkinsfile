@@ -1,14 +1,10 @@
-pipeline {
-    agent any
-    stages {
-        stage('SCM') {
-                checkout scm
+node {
+    stage('Example') {
+     checkout scm
+        if (env.BRANCH_NAME == 'master') {
+            echo 'This is Master Branch'
+        } else {
+            echo ' Not a Master Branch'
         }
-       stage('Branch'){
-
-	def branch = ${BRANCH_NAME}
-        echo branch
-	sh 'echo $BRANCH_NAME'
     }
-}
 }
