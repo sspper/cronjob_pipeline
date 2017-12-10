@@ -1,9 +1,11 @@
 def del
+def bran
 node {
     stage('Example') {
      checkout scm
      del = load 'branch.groovy'
-     del.branchTag()
+     sh "ls -ltr ."
+	echo "del.branchTag()"
         }
     }
 
