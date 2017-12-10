@@ -1,4 +1,7 @@
-def getbranch(){
-def branchName = sh(returnStdout: true, script: 'git rev-parse --abbrev-ref HEAD').trim()
-echo branchName
+def branchTag() {
+    return "${env.BRANCH_NAME}"
+}
+
+def branchAndBuildTag() {
+    return "${env.BRANCH_NAME}${env.BUILD_NUMBER}"
 }
