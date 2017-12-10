@@ -5,8 +5,8 @@ node {
      checkout scm
      del = load 'branch.groovy'
      sh "ls -ltr ."
-     bran = "del.branchTag()"
-     echo bran
+     bran = "del.echote()"
+     echo  bran
         }
     }
 
