@@ -4,8 +4,7 @@ pipeline {
         stage('SCM') {
             steps {
                 checkout scm
-		def del = 'load branch.groovy'
-		del.getbranch()
+                echo env.BRANCH_NAME
             }
         }
     }
