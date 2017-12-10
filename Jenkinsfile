@@ -5,7 +5,7 @@ node {
      checkout scm
      del = load 'branch.groovy'
      sh "ls -ltr ."
-     bran = "del.echote()"
+     bran = "del.evaluate()"
      echo  bran
         }
     }
