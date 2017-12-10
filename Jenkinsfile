@@ -11,3 +11,4 @@ pipeline {
 	sh 'echo $BRANCH_NAME'
     }
 }
+}
